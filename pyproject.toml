@@ -1,0 +1,12 @@
+[project]
+name = "dds-pdf-ingest"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["fastapi", "uvicorn", "httpx>=0.28", "python-multipart", "pydantic-settings"]
+
+[dependency-groups]
+dev = ["httpx>=0.28", "pytest>=9", "pytest-asyncio>=1", "pypdf>=6"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
